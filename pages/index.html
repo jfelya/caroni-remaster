@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>Banco Caroní, Sistema de Banca por Internet</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="javascripts/dibs.js"></script>
+	<script src="javascripts/inicio1.js"></script>
+	<link rel="shorcut icon" href="../images/logo.png">
+</head>
+<body onLoad="CheckSecurity()">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12">
+				<img id="headerImg" src="../images/login1.gif">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3">
+				<img id="colImg" src="../images/login4.jpg">
+			</div>
+			<div class="col-sm-9" id="loginDiv">
+				<form METHOD=POST ACTION="/DIBS_CARONI_VNZ/pages/body_wait_login.jsp" onSubmit="return FSubmitValidation(this)" target="_parent">
+					<input type=HIDDEN name=UserEntity value="">
+					<input type=HIDDEN name=UTYPE value="21">
+					<input type=HIDDEN name=IPADD value="186.92.44.132">
+
+
+					<h1>Bienvenido a su Servicio Click Caroní</h1><br>
+
+					<p>
+
+						Donde con total comodidad y seguridad podrá realizar sus operaciones bancarias más frecuentes.<br>
+						Al ingresar por primera vez seleccione el botón de Afiliación, y siga las intrucciones.
+					</p>
+
+					<div class="row">
+						<div class="col-sm-2"></div>
+						<label class="col-sm-4 col-form-label" for="usuario">Usuario
+						</label>
+						<div class="col-sm-4">
+							<input id="usuario" class="form-control" type="text" maxlength="10" name="UserId">
+						</div>
+						<div class="col-sm-2"></div>
+					</div><br>
+
+					<div class="row justify-content-center">
+						<div class="col-sm-4">
+							<input class="btn btn-primary btn-block" type=submit value="Ingresar" focus="yes">
+						</div>
+					</div><br>
+
+					<div class="btn-group justify-content-center" role="group">
+						<div class="col-sm-10">
+							<input class="btn btn-secondary btn-block" type=button value="Afiliacion" onClick="pops()">
+						</div>
+						<div class="col-sm-10">
+							<input class="btn btn-secondary btn-block" type=button value="Condiciones" onClick="popsConditions()">
+						</div>
+					</div><br><br>
+
+					<a href="javascript:popsreclave()">Si Olvidó su Clave o Usuario Haga Click Aquí</a>
+					<div id="bottomLn"></div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="javascripts/borders.js"></script>
+</html>
